@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+	<title>Proyecta Bit - Formulario con foto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Proyecta Bit - Formulario y foto"/>
+    <meta name="description" content="Video tutorial de captura de foto por camara y registro de datos en base de datos"/>
+    <meta name="author" content="Proyecta Bit - Luis Centeno"/>
+    <link rel="shortcut icon" href="custom/img/Logo.jpg">
+    <link rel="stylesheet" href="custom/css/bootstrap.min.css">
+	<link rel="stylesheet" href="custom/css/sweetalert.css">
+	<link rel="stylesheet" href="custom/css/custom.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row-fluid">
+			<h1 class="text-center mt-3">Formulario de Registro</h1>
+			<form id="frm_foto">
+				<div class="col-lg-12">
+					<p>Bienvenidos al formulario de datos personales, por favor ingresar sus datos correctamente estos serán guardados en el sistema, para su posterior consulta.</p>
+					<a class="btn btn-info btn-sm float-right" type="button" href="lista.html">Listado</a><br><br>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group row">
+		    					<label for="nombre" class="col-sm-3 col-form-label">Nombres:</label>
+		    					<div class="col-sm-9"><input type="text" class="form-control form-control-sm" id="nombre" name="nombre"></div>
+		  					</div>
+		  					<div class="form-group row">
+		  						<label for="apellido" class="col-sm-3 col-form-label">Apellidos:</label>
+		  						<div class="col-sm-9"><input type="text" class="form-control form-control-sm" id="apellido" name="apellido"></div>
+		  					</div>
+							<div class="form-group row">
+		    					<label for="fnac" class="col-sm-3 col-form-label">F. Nac.:</label>
+		    					<div class="col-sm-9"><input type="date" class="form-control form-control-sm" id="fnac" name="fnac"></div>
+		  					</div>
+		  					<div class="form-group row">
+		  						<label for="email" class="col-sm-3 col-form-label">Email:</label>
+		  						<div class="col-sm-9"><input type="email" class="form-control form-control-sm" id="email" name="email"></div>
+		  					</div>
+							<div class="form-group row">
+		    					<label for="dni" class="col-sm-3 col-form-label">D.N.I:</label>
+		    					<div class="col-sm-9"><input type="text" class="form-control form-control-sm numeroDni" id="dni" name="dni"></div>
+		  					</div>
+		  					<div class="form-group row">
+		  						<label for="sexo" class="col-sm-3 col-form-label">Sexo:</label>
+		  						<div class="col-sm-9">
+		  							<select class="form-control form-control-sm" id="sexo" name="sexo">
+		  								<option value="1">Femenino</option>
+		  								<option value="2">Masculino</option>
+		  							</select>
+		  						</div>
+		  					</div>
+		  					<div class="form-group row">
+		  						<label for="facultad" class="col-sm-3 col-form-label">Facultad:</label>
+		  						<div class="col-sm-9"><input type="text" class="form-control form-control-sm" id="facultad" name="facultad"></div>
+		  					</div>
+							<div class="form-group row">
+		    					<label for="carrera" class="col-sm-3 col-form-label">Carrera:</label>
+		    					<div class="col-sm-9"><input type="text" class="form-control form-control-sm" id="carrera" name="carrera"></div>
+		  					</div>
+		  					<div class="form-group row">
+		    					<label for="detalle" class="col-sm-3 col-form-label">Detalle:</label>
+		    					<div class="col-sm-9"><textarea id="detalle" class="form-control" rows="3" name="detalle"></textarea></div>
+		  					</div>
+						</div>
+						<div class="col-lg-6">
+							<fieldset class="form-group">
+								<div class="row">
+									<div class="form-check radio_check">
+										<input class="form-check-input" type="radio" name="radio_select" id="radiosfoto" value="1" checked>
+										<label class="form-check-label" for="radiosfoto">Seleccionar Foto</label>
+									</div>
+									<div class="form-check radio_check">
+										<input class="form-check-input" type="radio" name="radio_select" id="radiotfoto" value="0">
+										<label class="form-check-label" for="radiotfoto">Tomar Foto</label>
+									</div>
+								</div>
+							</fieldset>
+							<div class="container_radio">
+								<input type="file" class="form-control-file video_container" name="archivo" id="subirfoto" accept="image/*">
+								<video id="video" autoplay="autoplay" class="video_container none"></video>
+							</div>
+						</div>
+						<button class="btn btn-primary btn-sm" type="submit" id="btn_save">Guardar</button>
+					</div>
+					<canvas id="canvas" class="none"></canvas>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="custom/js/jquery.min.js"></script>
+    <script src="custom/js/bootstrap.min.js"></script>
+    <script src="custom/js/sweetalert.js"></script>
+	<script src="custom/app/camara.js"></script>
+	<script src="custom/app/inserta.js"></script>
+</body>
+</html>
