@@ -5,6 +5,9 @@ Estimad@s es un gusto de saludarlos para presentarles el proyecto de camara web 
 Pueden seguirme en mis redes sociales:
 
 Instagram:  @proyectabit
+
 Youtube:    Proyecta Bit
+
 Facebook:   /proyectabit
+
 Página web: https://proyectabit.com
