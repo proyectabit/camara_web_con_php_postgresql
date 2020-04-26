@@ -1,0 +1,13 @@
+.radio_check {
+	width: 49% !important;
+	text-align: center;
+}
+
+.video_container {
+	width: 100%;
+	padding: 25px;
+}
+
+.none {
+	display: none;
+}
